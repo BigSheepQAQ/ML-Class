@@ -1,0 +1,46 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build",
+            "type": "shell",
+            "osx": {
+                "command": "clang++",
+                "args": [
+                    "-std=c++17",
+                    "${file}",
+                    "-o",
+                    "${workspaceFolder}/${fileBasenameNoExtension}"
+                ],
+            },
+            "windows": {
+                "command": "g++",
+                "args": [
+                    "-std=c++17",
+                    "${file}",
+                    "-o",
+                    "${workspaceFolder}\\${fileBasenameNoExtension}.exe"
+                ],
+            }
+        },
+        {
+            "label": "Run",
+            "type": "shell",
+            "dependsOn":  "Build",
+            "osx": {
+                "command": "${workspaceFolder}/${fileBasenameNoExtension}",
+            },
+            "windows": {
+                "command": "${workspaceFolder}\\${fileBasenameNoExtension}.exe",
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+
+}

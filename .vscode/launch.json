@@ -1,0 +1,34 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "args": [],
+            "targetArchitecture": "x64",
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "program": "",
+            "externalConsole": true,
+            "linux": {
+                "program": "${workspaceRoot}/a.out",
+                "MIMode": "gdb"
+            },
+            "osx": {
+                "program": "${workspaceFolder}/${fileBasenameNoExtension}",
+                "MIMode": "lldb"
+            },
+            "windows": {
+                "miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe",
+                "program": "${workspaceFolder}\\${fileBasenameNoExtension}.exe",
+                "MIMode": "gdb"
+            },
+            "preLaunchTask": "Build",
+        }
+    ]
+}
