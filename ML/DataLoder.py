@@ -24,7 +24,7 @@ class DataLoder:
 
         X, Y, Z, result = [], [], [], []
         # 通过修改系数达到修改分配比例
-        for i in range(0, (XIndex // 20) * 11):
+        for i in range(0, XIndex // 10):
             temp = copy.deepcopy(dataSet[i])
             result.append(temp[YIndex])
             del temp[YIndex]
