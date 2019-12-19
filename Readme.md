@@ -1,8 +1,16 @@
 ### 环境配置
 
-OS: macOs Catalina 10.15.1
+**OS**: 
 
-Python: python 3.7.4 
+macOS Catalina 10.15.2
 
-Encoding: UTF8
+**Python**: 
+
+python 3.7.4 	
+
+scikit-learn 0.21.3
+
+**Encoding**: 
+
+utf8
 
